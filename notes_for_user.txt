@@ -1,0 +1,22 @@
+Notes for User
+------------------
+
+1) PhotonResolutionLoop.C
+	->PhotonResolutionLoopOutput.root
+2) CreateFitFunc.c
+	->fit_function.root
+3) PhotonClassify.C
+	->PhotonClassifyLoopOutput.root
+
+order to run in root:
+.L PhotonClassify.C
+TChain *schain = new TChain("diphoton/fTree");
+schain->Add("~/diphoton_GGJets_ntuples/out_GGJets_M-500To1000_Pt-50_13TeV-sherpa_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1_numEvent100_*.root");
+PhotonClassify pc
+pc.Loop()
+
+
+
+
+
+
